@@ -2,7 +2,7 @@
 import { useSelector } from "react-redux";
 import useHomeVideos from "../hooks/useHomeVideos";
 import VideoCard from "./VideoCard";
-import Shimmer from "./Shimmer";
+
 
 
 const VideoContainer = () => {
@@ -11,7 +11,7 @@ const VideoContainer = () => {
 
   useHomeVideos();
 
-  if (!homeVideos) return <Shimmer />;
+  if (!homeVideos) return null;
 
   return (
     <div className="w-[85%] flex flex-wrap justify-center">

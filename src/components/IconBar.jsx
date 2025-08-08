@@ -3,7 +3,7 @@ import { img_urls } from '../utils/constants';
 import IconCard from './IconCard';
 const IconBar = () => {
   return (
-    <div>
+    <div className='pt-1'>
         {
             img_urls.map(url => <IconCard key={url} icon={url}/>)
         }

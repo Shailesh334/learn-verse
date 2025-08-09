@@ -1,11 +1,20 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { closeMenuList } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
+import CommentList from "./CommentList";
+
+
+ 
+
+
 
 const Watch = () => {
 
+  const { idCount , commentsData }= useSelector(store => store.comment);
+  
   const dispatch =useDispatch();
+  
   dispatch(closeMenuList());
 
   let [ searchParams ] = useSearchParams();
@@ -24,7 +33,10 @@ const Watch = () => {
         allowfullscreen
       ></iframe>
 
-
+      <div className="p-2 my-2">
+        <h1 className="text-2xl font-bold">Comments :</h1>
+        <CommentList comments={commentsData}/>
+      </div>
 
     </div>
   );

@@ -5,7 +5,7 @@ import CommentCard from './CommentCard'
 const CommentList = ({comments}) => {
    if(comments.length <= 0)return;
   return (
-    <div >
+    <div className='pt-2'>
       {
         comments.map((comment , index )=> <CommentCard key={index} data={comment}/>)
       }

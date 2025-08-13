@@ -10,3 +10,5 @@
 - Home page videos loaded using yt api
 - implemented caching for home page videos
 - enhanced UI of side bar 
+- added watch route for watch page
+- display 
